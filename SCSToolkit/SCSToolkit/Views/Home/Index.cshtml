@@ -1,0 +1,65 @@
+﻿<div>    
+    <p class="lead">Check out some tools.</p>
+    <div class="row">
+        <div class="col-md-5" ng-controller="GuidGeneratorController">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Guid Generator</div>
+                <div class="panel-body">
+                    <form>
+                        <button class="btn btn-primary pull-right" ng-click="addNewGuid()"><i class="glyphicon glyphicon-plus"></i>New GUID</button><br /><br />
+                        <div class="input-group input-group-md">
+                            <span class="input-group-addon" id="sizing-addon1">GUID</span>
+                            <input type="text" class="form-control pull-right" size="45" ng-model="GUID" placeholder="00000000-0000-0000-0000-000000000000" aria-describedby="sizing-addon1">
+                        </div>
+                        <div class="input-group input-group-md">
+                            <span class="input-group-addon" id="sizing-addon1">xml guid lower</span>
+                            <input type="text" class="form-control pull-right" ng-model="GUID | guidlower" placeholder="00000000-0000-0000-0000-000000000000" aria-describedby="sizing-addon1">
+                        </div>
+                        <div class="input-group input-group-md">
+                            <span class="input-group-addon" id="sizing-addon1">XML GUID UPPER</span>
+                            <input type="text" class="form-control pull-right" ng-model="GUID | guidupper" placeholder="00000000-0000-0000-0000-000000000000" aria-describedby="sizing-addon1">
+                        </div>
+                        <div class="input-group input-group-md">
+                            <span class="input-group-addon" id="sizing-addon1">json guid lower</span>
+                            <input type="text" class="form-control pull-right" ng-model="GUID | jguidlower" placeholder="00000000000000000000000000000000" aria-describedby="sizing-addon1">
+                        </div>
+                        <div class="input-group input-group-md">
+                            <span class="input-group-addon" id="sizing-addon1">JSON GUID UPPER</span>
+                            <input type="text" class="form-control pull-right" ng-model="GUID | jguidupper" placeholder="00000000000000000000000000000000" aria-describedby="sizing-addon1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" ng-controller="DateCalculatorController">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Date Calculator</div>
+                <div class="panel-body">
+                    <div class="input-group input-group-md">
+                        <span class="input-group-addon" id="sizing-addon1">Date</span>
+                        <input type="date" ng-model="date" ng-change="calculate()" class="form-control pull-right" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="alert alert-info">
+                        {{date | date:'EEEE'}} - week# {{date | date:'ww'}} - {{date | isleapyear}}
+                    </div>
+                    <div class="input-group input-group-md">
+                        <span class="input-group-addon" id="sizing-addon1">Year</span>
+                        <input type="number" ng-model="year" ng-change="calculate()" class="form-control pull-right" aria-describedby="sizing-addon1">
+                        <span class="input-group-addon" id="sizing-addon1">Month</span>
+                        <input type="number" ng-model="month" ng-change="calculate()" class="form-control pull-right" aria-describedby="sizing-addon1">
+                        <span class="input-group-addon" id="sizing-addon1">Day</span>
+                        <input type="number" ng-model="day" ng-change="calculate()" class="form-control pull-right" aria-describedby="sizing-addon1">
+                    </div>
+                    <hr />
+                    <div class="input-group input-group-md">
+                        <span class="input-group-addon" id="sizing-addon1">Result</span>
+                        <input type="text" ng-model="result | date:'MM/dd/yyyy'" class="form-control pull-right" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="alert alert-info">
+                        {{result | date:'EEEE'}} - week# {{result | date:'ww'}} - {{result | isleapyear}}
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
