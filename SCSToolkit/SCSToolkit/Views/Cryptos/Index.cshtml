@@ -1,0 +1,48 @@
+﻿@model SCSToolkit.Models.CryptoViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Base 64 Dencoder</div>
+    <div class="panel-body">
+        <div class="input-group">
+            @*<span class="input-group-addon" id="plain-tect">Plain Text</span>*@
+            <input type="text" class="form-control" id="plain-text" placeholder="Plain Text" value="@Model.PlainText">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" id="encode-button">Encode</button>
+            </span>
+        </div>
+        <div class="input-group">
+            @*<span class="input-group-addon" id="encoded-text">Encoded Text</span>*@
+            <input type="text" class="form-control" id="enc-text" placeholder="Encoded Text" value="@Model.EncodedText">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" id="decode-button">Decode</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+
+    <script type="text/javascript">
+        var plainTextHolder = $("#plain-text");
+        var encTextHolder = $("#enc-text");
+
+        init();
+        
+        function init() {
+            $("#encode-button").click(encode);
+            $("#decode-button").click(decode);
+        }
+        function encode() {
+            var decText = btoa($(plainTextHolder).val());
+            $(encTextHolder).val(decText);
+        }
+        function decode() {
+            var plainText = atob($(encTextHolder).val());
+            $(plainTextHolder).val(plainText);
+        }
+    </script>
+}

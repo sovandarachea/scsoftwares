@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCSToolkit", "SCSToolkit\SCSToolkit.csproj", "{5823F193-0C8F-4DC8-AEFF-5971DC2CBD7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCS.Test", "Tests\SCS.Test\SCS.Test.csproj", "{F757A428-D38E-4B6E-916F-E088FDCAF235}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5823F193-0C8F-4DC8-AEFF-5971DC2CBD7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5823F193-0C8F-4DC8-AEFF-5971DC2CBD7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5823F193-0C8F-4DC8-AEFF-5971DC2CBD7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F757A428-D38E-4B6E-916F-E088FDCAF235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F757A428-D38E-4B6E-916F-E088FDCAF235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F757A428-D38E-4B6E-916F-E088FDCAF235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F757A428-D38E-4B6E-916F-E088FDCAF235}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
